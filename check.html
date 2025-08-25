@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .hero-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 3rem;
+        }
+
+        /* Grid Layout */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .grid-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .grid-content {
+            padding: 1.5rem;
+        }
+
+        .grid-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .grid-description {
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav ul {
+                gap: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">Your Logo</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Grid Layout -->
+    <main class="hero">
+        <h1 class="hero-title">Welcome to Our Website</h1>
+        <p class="hero-subtitle">Discover amazing content and services designed just for you</p>
+        
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=200&fit=crop" alt="Web Development">
+                <div class="grid-content">
+                    <h3 class="grid-title">Web Development</h3>
+                    <p class="grid-description">Create stunning websites with modern technologies and responsive designs that work perfectly across all devices.</p>
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop" alt="Digital Marketing">
+                <div class="grid-content">
+                    <h3 class="grid-title">Digital Marketing</h3>
+                    <p class="grid-description">Boost your online presence with strategic digital marketing campaigns that drive results and engagement.</p>
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=200&fit=crop" alt="Mobile Apps">
+                <div class="grid-content">
+                    <h3 class="grid-title">Mobile Apps</h3>
+                    <p class="grid-description">Build powerful mobile applications that provide seamless user experiences on iOS and Android platforms.</p>
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop" alt="UI/UX Design">
+                <div class="grid-content">
+                    <h3 class="grid-title">UI/UX Design</h3>
+                    <p class="grid-description">Design intuitive and beautiful user interfaces that enhance user experience and drive conversions.</p>
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=200&fit=crop" alt="Data Analytics">
+                <div class="grid-content">
+                    <h3 class="grid-title">Data Analytics</h3>
+                    <p class="grid-description">Transform your data into actionable insights with advanced analytics and visualization tools.</p>
+                </div>
+            </div>
+            
+            <div class="grid-item">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop" alt="Cloud Solutions">
+                <div class="grid-content">
+                    <h3 class="grid-title">Cloud Solutions</h3>
+                    <p class="grid-description">Leverage cloud technologies for scalable, secure, and efficient business operations and data management.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+            <p>Building digital experiences that matter.</p>
+            <div class="social-links">
+                <a href="#facebook">Facebook</a>
+                <a href="#twitter">Twitter</a>
+                <a href="#linkedin">LinkedIn</a>
+                <a href="#instagram">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
